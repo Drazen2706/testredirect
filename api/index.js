@@ -6,7 +6,7 @@ export const config = {
 
 export default async (req) => {
   const [subdomain] = req.headers.get('x-forwarded-host').split(`.`);
-  const redirection = redirections[subdomain] || 'https://goncy.twitter.com'; // Reemplazá con tu link por defecto
+  const redirection = redirections[subdomain] || 'https://en.wikipedia.org/wiki/UEFA_coefficient'; // Reemplazá con tu link por defecto
 
   return Response.redirect(redirection, 302);
 };
